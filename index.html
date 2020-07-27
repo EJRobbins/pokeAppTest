@@ -1,0 +1,101 @@
+<div class="container-xl">
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <!-- Modal header -->
+                    <div class="modal-header">
+                        <img src="https://fontmeme.com/permalink/200618/87ce7896ccebe5d1b44b5e2d3dbbc63a.png" alt="Battle Logo" class="modalLogo">
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                    <!-- Time format setting -->
+                    <div class="btn-group" role="group">
+                        <p class="modalText">Now pick a Pokemon you'd like to face in Battle!</p>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn-secondary doneBtn" data-dismiss="modal"><img src="https://fontmeme.com/permalink/200618/a772b5d6b8856fefe9663f0538188e2d.png" alt="Done button. Click here to dismiss the modal"></button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="row letsBattleRow" style="display: none;">
+        <img src="https://fontmeme.com/permalink/200617/c481a7e89638f316964bff4c5a8d3575.png" alt="Let's Battle!" id="letsBattleImg">
+    </div>
+
+    <div class="row vsRow">
+        <div class="col-lg-12">
+            <img class="battleImg1 vsPic1" src="" style="display: none;">
+            <img class="vs vsImg" src="https://fontmeme.com/permalink/200620/da830207bd6d56838be143fdb4327c8f.png" style="display: none;">
+            <img class="battleImg2 vsPic2" src=""  style="display: none;">
+        </div>
+    </div>
+
+    <div class="row buttonRow">
+        {{!-- View All Pokemon --}}
+        <div class="col-lg-4 d-flex flex-column justify-content-center">
+            <img src="https://webstockreview.net/images/pikachu-clipart-lightning-13.gif" alt="Picture of Pikachu" class="indexImg">
+            <a href="" class="viewAll"><img src="https://fontmeme.com/permalink/200612/d62ce88d13688f6b20735ce0e0a88514.png" alt="View All Pokemon"></a>
+        </div>
+
+        {{!-- View Your Pokemon --}}
+        <div class="col-lg-4 d-flex flex-column justify-content-center">
+            <img src="/img/charamander.png" alt="Picture of 16bit Charamander" class="indexImg">
+            <a href="" class="viewYour"><img src="https://fontmeme.com/permalink/200612/c2c6bfc94353a13d8d3b6c86b904134c.png" alt="View Your Pokemon"></a>
+        </div>
+
+        {{!-- Create New Pokemon --}}
+        <div class="col-lg-4 d-flex flex-column justify-content-center">
+            <img src="/img/vaporeon.png" alt="Placeholder" class="indexImg">
+            <a href="/pixel" class="createNew"><img src="https://fontmeme.com/permalink/200612/97310e0107c8fb651a189bcbb52ea562.png" alt="Create a Pokemon"></a>
+        </div>
+    </div>
+
+    {{!-- Search row --}}
+    <div class="row searchRow">
+        <div class="col-lg-12">
+            <img src="https://fontmeme.com/permalink/200611/65ca505017db3f3ecf7d7fcd3f743e02.png" alt="Search for Pokemon" class="searchFor">
+
+            <form class="input-group">
+                <input class="form-control mr-sm-2 searchBar" type="search" placeholder="Search Pokemon" aria-label="Search">
+                <button class="searchBtn"><i class="fas fa-search"></i></button>
+            </form>
+            
+            <div class="error" style="display: none;"></div>
+        </div>
+    </div>
+
+    {{!-- Search results --}}
+    <div class="row searchResults" style="display: none;"></div>
+
+    <div class="row goToNext" style="display: none;">
+        <div class="col-lg-12">
+            <button class="goToNextBtn"><img src="https://fontmeme.com/permalink/200620/80738b349ae4fa29f81cf53657f136f1.png" alt="Go to the next page"></button>
+        </div>
+    </div>
+
+    <div class="row goToPrev" style="display: none;">
+        <div class="col-lg-12">
+            <button class="goToPrevBtn"><img src="https://fontmeme.com/permalink/200620/55639c82cbe81f8b07b1a7dc023651cf.png" alt="Go to the previous page"></button>
+        </div>
+    </div>
+
+</div>
+
+{{!-- jQuery Link --}}
+<script src="https://code.jquery.com/jquery.js"></script>
+
+{{!-- Bootstrap js links --}}
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+{{!-- js link --}}
+<script src="/index.js"></script>

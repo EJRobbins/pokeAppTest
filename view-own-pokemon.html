@@ -1,0 +1,114 @@
+<div class="container">
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <!-- Modal header -->
+                    <div class="modal-header">
+                        <img src="https://fontmeme.com/permalink/200618/87ce7896ccebe5d1b44b5e2d3dbbc63a.png" alt="Battle Logo" class="modalLogo">
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                    <!-- Time format setting -->
+                    <div class="btn-group" role="group">
+                        <p class="modalText">Now pick a Pokemon you'd like to face in Battle!</p>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn-secondary doneBtn" data-dismiss="modal"><img src="https://fontmeme.com/permalink/200618/a772b5d6b8856fefe9663f0538188e2d.png" alt="Done button. Click here to dismiss the modal"></button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    {{!-- Modal for delete confirmation --}}
+    <div class="modal fade" id="deleteModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <!-- Modal header -->
+                    <div class="modal-header deleteModalHeader">
+                        <img src="https://fontmeme.com/permalink/200622/707b75c20d54f2277d91bca3875a88cd.png" alt="Are you sure logo" class="modalLogo">
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                    <!-- Time format setting -->
+                    <div class="btn-group modalBody" role="group">
+                        <p class="modalText deleteModalText">Are you sure you want to delete <span class="pokemonName"></span> from the database? This is an unreversible process!</p>
+                    
+                        {{!-- Got this simple loader from w3Schools  https://www.w3schools.com/howto/howto_css_loader.asp --}}
+                        <div class="loader"></div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer deleteModalFooter">
+                        <button type="button" class="btn-secondary noBtn" data-dismiss="modal"><img src="https://fontmeme.com/permalink/200622/b364480e05a311648e4f5efd5dd6e97d.png" alt="No button. Click here to dismiss the modal and not delete your pokemon"></button>
+                        <button type="button" class="btn-secondary yesBtn"><img src="https://fontmeme.com/permalink/200622/2106900f4ded4e86bc3a927ebd2615c2.png" alt="Yes button. Click here to dismiss the modal and delete your pokemon"></button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="row letsBattleRow" style="display: none;">
+        <img src="https://fontmeme.com/permalink/200617/c481a7e89638f316964bff4c5a8d3575.png" alt="Let's Battle!" id="letsBattleImg">
+    </div>
+
+    <div class="row vsRow">
+        <div class="col-lg-12">
+            <img class="battleImg1 vsPic1" src="" style="display: none;">
+            <img class="vs vsImg" src="https://fontmeme.com/permalink/200620/da830207bd6d56838be143fdb4327c8f.png" style="display: none;">
+            <img class="battleImg2 vsPic2" src=""  style="display: none;">
+        </div>
+    </div>
+
+    <div class="row mainContent">
+
+        <img src="https://fontmeme.com/permalink/200611/5cb3ac30028fbdf2a0ac059f87f553e3.png" alt="" style="display: block; margin: 0 auto 30px auto">
+        
+        <div class="col-lg-12 pokemonCardRow">
+
+            {{#each pokemon.Pokemon}}
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <img src="{{this.dataValues.sprite}}" alt="Picture of {{this.dataValues.name}}" class="pokemonImg">
+                        </div>
+
+                        <div class="pokemonText">
+                            <a href="" class="trashATag" data-id="{{this.dataValues.id}}" data-name="{{this.dataValues.name}}"><i class="far fa-trash-alt trash"></i></a>
+                            <p>Name: {{this.dataValues.name}}</p>
+                            <p>Type: <span class="type{{@index}}">TBD</span></p>
+                            <p>HP: {{this.dataValues.stats.hp}}</p>
+                            <p>Speed: {{this.dataValues.stats.speed}}</p>
+                            <p>Attack: {{this.dataValues.stats.attack}}</p>
+                            <p>Defense: {{this.dataValues.stats.defense}}</p>
+                            <p>SP Attack: {{this.dataValues.stats.spAttack}}</p>
+                            <p>SP Defense: {{this.dataValues.stats.spDefense}}</p>
+
+                            <button class="battleBtn battleBtn2 btn bb{{@index}}" data-id="{{this.dataValues.id}}">
+                                <img src="https://fontmeme.com/permalink/200617/496fe144d8c773fefe9c9dbe2e35d2bf.png" alt="Click on this button to battle this pokemon!">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+{{!-- jQuery Link --}}
+<script src="https://code.jquery.com/jquery.js"></script>
+
+{{!-- Bootstrap js links --}}
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+{{!-- js link --}}
+<script src="/js/view-own.js"></script>

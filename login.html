@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <!-- Modal header -->
+                    <div class="modal-header">
+                        <img src="https://fontmeme.com/permalink/200618/06c582a428e6bdc942539c3ab50b4e16.png" alt="Error logo" class="modalLogo">
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                    <!-- Time format setting -->
+                    <div class="btn-group" role="group">
+                        <p class="modalText">
+                            Doesn't look like there's an account with that username and/or password.
+                            Please make sure you typed in everything correctly.
+                        </p>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn-secondary doneBtn" data-dismiss="modal"><img src="https://fontmeme.com/permalink/200618/a772b5d6b8856fefe9663f0538188e2d.png" alt="Done button. Click here to dismiss the modal"></button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="row">
+        <img src="https://fontmeme.com/permalink/200618/45b131c4bd652b4811d653a2935cf275.png" alt="Log in to Poke-Build logo" class="logInLogo">
+    
+        <div class="col-lg-6 logInForm">
+            <form>
+                <div class="form-group">
+                    <label for="userInputUsername"><img src="https://fontmeme.com/permalink/200618/37118b7b30332d03c14dc2d9cfbe8ff5.png" alt="Type in your username below"></label>
+                    <input type="username" class="form-control" id="logInUsername" aria-describedby="userNameHelp">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1"><img src="https://fontmeme.com/permalink/200618/42bf32646bb38dd3b85700879ff4d60e.png" alt="Type in your password below"></label>
+                    <input type="password" class="form-control" id="logInPassword">
+                </div>
+                <button type="submit" class="btn logInBtn"><img src="https://fontmeme.com/permalink/200618/0d5e31521fd7799c4fb093d46344e807.png" alt="Log in button"></button>
+            </form>
+        </div>
+    </div>
+    
+    <p class="loginText">Don't have an account yet? <a href="/signup" class="loginLink">Make an account here!</a></p>
+</div>
+
+
+{{!-- jQuery Link --}}
+<script src="https://code.jquery.com/jquery.js"></script>
+
+{{!-- Bootstrap js links --}}
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+{{!-- js link --}}
+<script src="/js/login.js"></script>
